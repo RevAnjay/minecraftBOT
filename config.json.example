@@ -1,0 +1,25 @@
+{
+  "version": "1.21.1",
+  "host": "example.com",
+  "port": 25565,
+  "bots": [
+    {
+      "main": true,
+      "config": {
+        "username": "YourbotUsername",
+        "physicsEnabled": true,
+        "keepAlive": true
+      },
+      "data": { "loginPassword": "" },
+      "modules": {
+        "spawnerEnabled": {
+          "enabled": false,
+          "spawners": [{ "x": 0, "y": 0, "z": 0 }]
+        },
+        "fishmode": false,
+        "autoSell": false,
+        "shardFarm": false
+      }
+    }
+  ]
+}
