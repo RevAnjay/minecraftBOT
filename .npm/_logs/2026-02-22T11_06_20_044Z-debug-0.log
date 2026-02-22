@@ -1,0 +1,308 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@11.10.0
+2 info using node@v23.11.1
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/container/.npmrc
+5 silly config load:file:/usr/local/etc/npmrc
+6 verbose title npm install
+7 verbose argv "install"
+8 verbose logfile logs-max:10 dir:/home/container/.npm/_logs/2026-02-22T11_06_20_044Z-
+9 verbose logfile /home/container/.npm/_logs/2026-02-22T11_06_20_044Z-debug-0.log
+10 silly logfile start cleaning logs, removing 1 files
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly idealTree buildDeps
+14 silly reify moves {}
+15 silly audit bulk request {
+15 silly audit   '@azure/msal-common': [ '14.16.1' ],
+15 silly audit   '@azure/msal-node': [ '2.16.3' ],
+15 silly audit   '@nxg-org/mineflayer-util-plugin': [ '1.8.4' ],
+15 silly audit   '@types/node': [ '25.0.10' ],
+15 silly audit   '@types/node-rsa': [ '1.1.4' ],
+15 silly audit   '@types/readable-stream': [ '4.0.23' ],
+15 silly audit   '@xboxreplay/errors': [ '0.1.0' ],
+15 silly audit   '@xboxreplay/xboxlive-auth': [ '3.3.3' ],
+15 silly audit   'abort-controller': [ '3.0.0' ],
+15 silly audit   accepts: [ '2.0.0' ],
+15 silly audit   'aes-js': [ '3.1.2' ],
+15 silly audit   ajv: [ '6.12.6' ],
+15 silly audit   asn1: [ '0.2.3' ],
+15 silly audit   async: [ '3.2.6' ],
+15 silly audit   axios: [ '0.21.4' ],
+15 silly audit   'balanced-match': [ '1.0.2' ],
+15 silly audit   'base64-js': [ '1.5.1' ],
+15 silly audit   'body-parser': [ '2.2.2' ],
+15 silly audit   'brace-expansion': [ '2.0.2' ],
+15 silly audit   buffer: [ '6.0.3' ],
+15 silly audit   'buffer-equal': [ '1.0.1' ],
+15 silly audit   'buffer-equal-constant-time': [ '1.0.1' ],
+15 silly audit   bytes: [ '3.1.2' ],
+15 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+15 silly audit   'call-bound': [ '1.0.4' ],
+15 silly audit   chokidar: [ '5.0.0' ],
+15 silly audit   commander: [ '2.20.3' ],
+15 silly audit   'content-disposition': [ '1.0.1' ],
+15 silly audit   'content-type': [ '1.0.5' ],
+15 silly audit   cookie: [ '0.7.2' ],
+15 silly audit   'cookie-signature': [ '1.2.2' ],
+15 silly audit   cors: [ '2.8.6' ],
+15 silly audit   debug: [ '4.4.3' ],
+15 silly audit   depd: [ '2.0.0' ],
+15 silly audit   'discontinuous-range': [ '1.0.0' ],
+15 silly audit   'dunder-proto': [ '1.0.1' ],
+15 silly audit   'ecdsa-sig-formatter': [ '1.0.11' ],
+15 silly audit   'ee-first': [ '1.1.1' ],
+15 silly audit   ejs: [ '4.0.1' ],
+15 silly audit   encodeurl: [ '2.0.0' ],
+15 silly audit   'endian-toggle': [ '0.0.0' ],
+15 silly audit   'es-define-property': [ '1.0.1' ],
+15 silly audit   'es-errors': [ '1.3.0' ],
+15 silly audit   'es-object-atoms': [ '1.1.1' ],
+15 silly audit   'escape-html': [ '1.0.3' ],
+15 silly audit   etag: [ '1.8.1' ],
+15 silly audit   'event-target-shim': [ '5.0.1' ],
+15 silly audit   events: [ '3.3.0' ],
+15 silly audit   express: [ '5.2.1' ],
+15 silly audit   'fast-deep-equal': [ '3.1.3' ],
+15 silly audit   'fast-json-stable-stringify': [ '2.1.0' ],
+15 silly audit   filelist: [ '1.0.4' ],
+15 silly audit   finalhandler: [ '2.1.1' ],
+15 silly audit   'follow-redirects': [ '1.15.11' ],
+15 silly audit   forwarded: [ '0.2.0' ],
+15 silly audit   fresh: [ '2.0.0' ],
+15 silly audit   'function-bind': [ '1.1.2' ],
+15 silly audit   'get-intrinsic': [ '1.3.0' ],
+15 silly audit   'get-proto': [ '1.0.1' ],
+15 silly audit   gopd: [ '1.2.0' ],
+15 silly audit   'has-symbols': [ '1.1.0' ],
+15 silly audit   hasown: [ '2.0.2' ],
+15 silly audit   'http-errors': [ '2.0.1' ],
+15 silly audit   'iconv-lite': [ '0.7.2' ],
+15 silly audit   ieee754: [ '1.2.1' ],
+15 silly audit   inherits: [ '2.0.4' ],
+15 silly audit   'ipaddr.js': [ '1.9.1' ],
+15 silly audit   'is-promise': [ '4.0.0' ],
+15 silly audit   jake: [ '10.9.4' ],
+15 silly audit   'json-schema-traverse': [ '0.4.1' ],
+15 silly audit   jsonwebtoken: [ '9.0.3' ],
+15 silly audit   jwa: [ '2.0.1' ],
+15 silly audit   jws: [ '4.0.1' ],
+15 silly audit   'lodash.includes': [ '4.3.0' ],
+15 silly audit   'lodash.isboolean': [ '3.0.3' ],
+15 silly audit   'lodash.isinteger': [ '4.0.4' ],
+15 silly audit   'lodash.isnumber': [ '3.0.3' ],
+15 silly audit   'lodash.isplainobject': [ '4.0.6' ],
+15 silly audit   'lodash.isstring': [ '4.0.1' ],
+15 silly audit   'lodash.merge': [ '4.6.2' ],
+15 silly audit   'lodash.once': [ '4.1.1' ],
+15 silly audit   'lodash.reduce': [ '4.6.0' ],
+15 silly audit   macaddress: [ '0.5.4' ],
+15 silly audit   'math-intrinsics': [ '1.1.0' ],
+15 silly audit   'media-typer': [ '1.1.0' ],
+15 silly audit   'merge-descriptors': [ '2.0.0' ],
+15 silly audit   'mime-db': [ '1.54.0' ],
+15 silly audit   'mime-types': [ '3.0.2' ],
+15 silly audit   'minecraft-data': [ '3.103.0' ],
+15 silly audit   'minecraft-folder-path': [ '1.2.0' ],
+15 silly audit   'minecraft-protocol': [ '1.63.0' ],
+15 silly audit   mineflayer: [ '4.34.0' ],
+15 silly audit   'mineflayer-armor-manager': [ '2.0.1' ],
+15 silly audit   'mineflayer-auto-eat': [ '5.0.3' ],
+15 silly audit   'mineflayer-pathfinder': [ '2.4.5' ],
+15 silly audit   minimatch: [ '5.1.6' ],
+15 silly audit   mojangson: [ '2.0.4' ],
+15 silly audit   moo: [ '0.5.2' ],
+15 silly audit   ms: [ '2.1.3' ],
+15 silly audit   nearley: [ '2.20.1' ],
+15 silly audit   negotiator: [ '1.0.0' ],
+15 silly audit   'node-fetch': [ '2.7.0' ],
+15 silly audit   'node-rsa': [ '0.4.2' ],
+15 silly audit   'object-assign': [ '4.1.1' ],
+15 silly audit   'object-inspect': [ '1.13.4' ],
+15 silly audit   'on-finished': [ '2.4.1' ],
+15 silly audit   once: [ '1.4.0' ],
+15 silly audit   parseurl: [ '1.3.3' ],
+15 silly audit   'path-to-regexp': [ '8.3.0' ],
+15 silly audit   picocolors: [ '1.1.1' ],
+15 silly audit   'prismarine-auth': [ '2.7.0' ],
+15 silly audit   'prismarine-biome': [ '1.3.0' ],
+15 silly audit   'prismarine-block': [ '1.22.0' ],
+15 silly audit   'prismarine-chat': [ '1.12.0' ],
+15 silly audit   'prismarine-chunk': [ '1.39.0' ],
+15 silly audit   'prismarine-entity': [ '2.5.0' ],
+15 silly audit   'prismarine-item': [ '1.17.0' ],
+15 silly audit   'prismarine-nbt': [ '2.8.0' ],
+15 silly audit   'prismarine-physics': [ '1.10.0' ],
+15 silly audit   'prismarine-realms': [ '1.4.1' ],
+15 silly audit   'prismarine-recipe': [ '1.3.1' ],
+15 silly audit   'prismarine-registry': [ '1.11.0' ],
+15 silly audit   'prismarine-windows': [ '2.9.0' ],
+15 silly audit   'typed-emitter': [ '2.1.0', '1.4.0' ],
+15 silly audit   'prismarine-world': [ '3.6.3' ],
+15 silly audit   process: [ '0.11.10' ],
+15 silly audit   protodef: [ '1.19.0' ],
+15 silly audit   'protodef-validator': [ '1.4.0' ],
+15 silly audit   'proxy-addr': [ '2.0.7' ],
+15 silly audit   punycode: [ '2.3.1' ],
+15 silly audit   qs: [ '6.14.1' ],
+15 silly audit   'railroad-diagrams': [ '1.0.0' ],
+15 silly audit   randexp: [ '0.4.6' ],
+15 silly audit   'range-parser': [ '1.2.1' ],
+15 silly audit   'raw-body': [ '3.0.2' ],
+15 silly audit   'readable-stream': [ '4.7.0' ],
+15 silly audit   readdirp: [ '5.0.0' ],
+15 silly audit   readline: [ '1.3.0' ],
+15 silly audit   ret: [ '0.1.15' ],
+15 silly audit   router: [ '2.2.0' ],
+15 silly audit   rxjs: [ '7.8.2' ],
+15 silly audit   'safe-buffer': [ '5.2.1' ],
+15 silly audit   'safer-buffer': [ '2.1.2' ],
+15 silly audit   semver: [ '7.7.3' ],
+15 silly audit   send: [ '1.2.1' ],
+15 silly audit   'serve-static': [ '2.2.1' ],
+15 silly audit   setprototypeof: [ '1.2.0' ],
+15 silly audit   'side-channel': [ '1.1.0' ],
+15 silly audit   'side-channel-list': [ '1.0.0' ],
+15 silly audit   'side-channel-map': [ '1.0.1' ],
+15 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+15 silly audit   'smart-buffer': [ '4.2.0' ],
+15 silly audit   statuses: [ '2.0.2' ],
+15 silly audit   string_decoder: [ '1.3.0' ],
+15 silly audit   toidentifier: [ '1.0.1' ],
+15 silly audit   tr46: [ '0.0.3' ],
+15 silly audit   tslib: [ '2.8.1' ],
+15 silly audit   'type-is': [ '2.0.1' ],
+15 silly audit   uint4: [ '0.1.2' ],
+15 silly audit   'undici-types': [ '7.16.0' ],
+15 silly audit   unpipe: [ '1.0.0' ],
+15 silly audit   'uri-js': [ '4.4.1' ],
+15 silly audit   uuid: [ '8.3.2' ],
+15 silly audit   'uuid-1345': [ '1.0.2' ],
+15 silly audit   vary: [ '1.1.2' ],
+15 silly audit   vec3: [ '0.1.10' ],
+15 silly audit   'webidl-conversions': [ '3.0.1' ],
+15 silly audit   'whatwg-url': [ '5.0.0' ],
+15 silly audit   wrappy: [ '1.0.2' ],
+15 silly audit   ws: [ '8.19.0' ],
+15 silly audit   'xxhash-wasm': [ '0.4.2' ],
+15 silly audit   yggdrasil: [ '1.7.0' ]
+15 silly audit }
+16 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 290ms
+17 silly audit report {
+17 silly audit report   ajv: [
+17 silly audit report     {
+17 silly audit report       id: 1113398,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-2g4f-4pwh-qvx6',
+17 silly audit report       title: 'ajv has ReDoS when using `$data` option',
+17 silly audit report       severity: 'moderate',
+17 silly audit report       vulnerable_versions: '<6.14.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     }
+17 silly audit report   ],
+17 silly audit report   axios: [
+17 silly audit report     {
+17 silly audit report       id: 1111034,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-jr5f-v2jv-69x6',
+17 silly audit report       title: 'axios Requests Vulnerable To Possible SSRF and Credential Leakage via Absolute URL',
+17 silly audit report       severity: 'high',
+17 silly audit report       vulnerable_versions: '<0.30.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     },
+17 silly audit report     {
+17 silly audit report       id: 1113274,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-43fc-jf86-j433',
+17 silly audit report       title: 'Axios is Vulnerable to Denial of Service via __proto__ Key in mergeConfig',
+17 silly audit report       severity: 'high',
+17 silly audit report       vulnerable_versions: '<=0.30.2',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     },
+17 silly audit report     {
+17 silly audit report       id: 1097679,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-wf5p-g6vw-rhxx',
+17 silly audit report       title: 'Axios Cross-Site Request Forgery Vulnerability',
+17 silly audit report       severity: 'moderate',
+17 silly audit report       vulnerable_versions: '>=0.8.1 <0.28.0',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     }
+17 silly audit report   ],
+17 silly audit report   minimatch: [
+17 silly audit report     {
+17 silly audit report       id: 1113371,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-3ppc-4f35-3m26',
+17 silly audit report       title: 'minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern',
+17 silly audit report       severity: 'high',
+17 silly audit report       vulnerable_versions: '<10.2.1',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     }
+17 silly audit report   ],
+17 silly audit report   qs: [
+17 silly audit report     {
+17 silly audit report       id: 1113161,
+17 silly audit report       url: 'https://github.com/advisories/GHSA-w7fw-mjwx-w883',
+17 silly audit report       title: "qs's arrayLimit bypass in comma parsing allows denial of service",
+17 silly audit report       severity: 'low',
+17 silly audit report       vulnerable_versions: '>=6.7.0 <=6.14.1',
+17 silly audit report       cwe: [Array],
+17 silly audit report       cvss: [Object]
+17 silly audit report     }
+17 silly audit report   ]
+17 silly audit report }
+18 silly packumentCache corgi:https://registry.npmjs.org/ajv cache-miss
+19 silly packumentCache corgi:https://registry.npmjs.org/axios cache-miss
+20 silly packumentCache corgi:https://registry.npmjs.org/minimatch cache-miss
+21 silly packumentCache corgi:https://registry.npmjs.org/qs cache-miss
+22 http cache https://registry.npmjs.org/axios 13ms (cache hit)
+23 silly packumentCache corgi:https://registry.npmjs.org/axios set size:271202 disposed:false
+24 http cache https://registry.npmjs.org/qs 18ms (cache hit)
+25 silly packumentCache corgi:https://registry.npmjs.org/qs set size:143799 disposed:false
+26 http cache https://registry.npmjs.org/minimatch 20ms (cache hit)
+27 silly packumentCache corgi:https://registry.npmjs.org/minimatch set size:154574 disposed:false
+28 http cache https://registry.npmjs.org/ajv 22ms (cache hit)
+29 silly packumentCache corgi:https://registry.npmjs.org/ajv set size:464537 disposed:false
+30 silly packumentCache corgi:https://registry.npmjs.org/protodef-validator cache-miss
+31 http cache https://registry.npmjs.org/protodef-validator 2ms (cache hit)
+32 silly packumentCache corgi:https://registry.npmjs.org/protodef-validator set size:14600 disposed:false
+33 silly packumentCache corgi:https://registry.npmjs.org/@xboxreplay%2fxboxlive-auth cache-miss
+34 http cache https://registry.npmjs.org/@xboxreplay%2fxboxlive-auth 2ms (cache hit)
+35 silly packumentCache corgi:https://registry.npmjs.org/@xboxreplay%2fxboxlive-auth set size:53177 disposed:false
+36 silly packumentCache corgi:https://registry.npmjs.org/filelist cache-miss
+37 http cache https://registry.npmjs.org/filelist 3ms (cache hit)
+38 silly packumentCache corgi:https://registry.npmjs.org/filelist set size:9142 disposed:false
+39 silly packumentCache corgi:https://registry.npmjs.org/body-parser cache-miss
+40 silly packumentCache corgi:https://registry.npmjs.org/express cache-miss
+41 http cache https://registry.npmjs.org/body-parser 5ms (cache hit)
+42 silly packumentCache corgi:https://registry.npmjs.org/body-parser set size:77795 disposed:false
+43 http cache https://registry.npmjs.org/express 9ms (cache hit)
+44 silly packumentCache corgi:https://registry.npmjs.org/express set size:337735 disposed:false
+45 silly packumentCache corgi:https://registry.npmjs.org/prismarine-auth cache-miss
+46 http cache https://registry.npmjs.org/prismarine-auth 2ms (cache hit)
+47 silly packumentCache corgi:https://registry.npmjs.org/prismarine-auth set size:44923 disposed:false
+48 silly packumentCache corgi:https://registry.npmjs.org/jake cache-miss
+49 http cache https://registry.npmjs.org/jake 2ms (cache hit)
+50 silly packumentCache corgi:https://registry.npmjs.org/jake set size:131466 disposed:false
+51 silly packumentCache corgi:https://registry.npmjs.org/minecraft-protocol cache-miss
+52 http cache https://registry.npmjs.org/minecraft-protocol 3ms (cache hit)
+53 silly packumentCache corgi:https://registry.npmjs.org/minecraft-protocol set size:267148 disposed:false
+54 silly packumentCache corgi:https://registry.npmjs.org/ejs cache-miss
+55 http cache https://registry.npmjs.org/ejs 2ms (cache hit)
+56 silly packumentCache corgi:https://registry.npmjs.org/ejs set size:65016 disposed:false
+57 silly packumentCache corgi:https://registry.npmjs.org/mineflayer cache-miss
+58 http cache https://registry.npmjs.org/mineflayer 2ms (cache hit)
+59 silly packumentCache corgi:https://registry.npmjs.org/mineflayer set size:273782 disposed:false
+60 silly packumentCache corgi:https://registry.npmjs.org/mineflayer-armor-manager cache-miss
+61 silly packumentCache corgi:https://registry.npmjs.org/mineflayer-auto-eat cache-miss
+62 http cache https://registry.npmjs.org/mineflayer-auto-eat 3ms (cache hit)
+63 silly packumentCache corgi:https://registry.npmjs.org/mineflayer-auto-eat set size:50511 disposed:false
+64 http cache https://registry.npmjs.org/mineflayer-armor-manager 3ms (cache hit)
+65 silly packumentCache corgi:https://registry.npmjs.org/mineflayer-armor-manager set size:15420 disposed:false
+66 verbose cwd /home/container
+67 verbose os Linux 6.17.9-1-pve
+68 verbose node v23.11.1
+69 verbose npm  v11.10.0
+70 verbose exit 0
+71 info ok
