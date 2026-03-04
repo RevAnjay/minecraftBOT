@@ -1,4 +1,27 @@
 {
+  "name": "minecraftbot",
+  "version": "1",
+  "description": "> just a mineflayer with some automations",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xAezteruu/minecraftBOT.git"
+  },
+  "keywords": [
+    "mineflayer",
+    "bot",
+    "automation",
+    "minecraft"
+  ],
+  "author": "Aezteru",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/xAezteruu/minecraftBOT/issues"
+  },
+  "homepage": "https://github.com/xAezteruu/minecraftBOT#readme",
   "dependencies": {
     "@miner-org/mineflayer-baritone": "^4.5.0",
     "chokidar": "^5.0.0",
