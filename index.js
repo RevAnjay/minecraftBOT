@@ -225,13 +225,13 @@ async function main(v) {
         await bot.waitForTicks(10);
         await bot.clickWindow(3, 0, 0);
       }
-      const match = m.toString().match(/✉⬇ ᴍᴇꜱꜱᴀɢᴇ (.*?) → (.*?)\) /)
+      const match = m.toString().match(/✉⬇ ᴍᴇꜱꜱᴀɢᴇ \((.*?) → (.*?)\) /)
       if (
         match && config.owners.includes(match[1]) && match[2] === bot.username
       ) {
         const msg = m
           .toString()
-          .replace(/✉⬇ ᴍᴇꜱꜱᴀɢᴇ (.*?) → (.*?)\) /, "");
+          .replace(/✉⬇ ᴍᴇꜱꜱᴀɢᴇ \((.*?) → (.*?)\) /, "");
         const args = msg.split(" ");
         const command = args.shift();
         let d = { m, bot, args, command, pos, defaultMove, config: v };
