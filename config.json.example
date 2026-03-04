@@ -2,10 +2,10 @@
   "version": "1.21.1",
   "host": "example.com",
   "port": 25565,
+  "main": "YourmainbotUsername",
   "owners": ["YourUsername"],
   "bots": [
     {
-      "main": true,
       "config": {
         "username": "YourbotUsername",
         "physicsEnabled": true,

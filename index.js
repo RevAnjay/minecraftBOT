@@ -205,9 +205,9 @@ async function main(v) {
         if (latestlog.length > 50) latestlog.shift();
         latestlog.push(m.toHTML());
       }
-      if (m.toString().includes("Shards » ★10 has been added to your account!"))
+      if (m.toString().includes("Shards » ★10 has been added to your account!") && bot.username !== config.main)
         bot.chat(
-          `/shard pay ${config.bots.find((d) => d.main).config.username} 10`,
+          `/shard pay ${config.main} 10`,
         );
       if (!m.toString().includes("Mana")) {
         if (latestchat[bot.username].length > 50)
