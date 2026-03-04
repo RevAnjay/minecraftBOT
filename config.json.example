@@ -2,6 +2,7 @@
   "version": "1.21.1",
   "host": "example.com",
   "port": 25565,
+  "owners": ["YourUsername"],
   "bots": [
     {
       "main": true,
