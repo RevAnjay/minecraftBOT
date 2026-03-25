@@ -179,7 +179,7 @@ async function main(v) {
       await bot.waitForTicks(10);
       if (bot.currentWindow) bot.clickWindow(0, 0, 0);
     }
-    if (m.name.includes("inv")) console.log(d, m);
+    if (m.name.includes("inv")) console.log(`[${bot.username}] ${d}, ${m}`);
   });
 
   bot.once("spawn", () => {
@@ -275,8 +275,10 @@ async function main(v) {
     });
   });
 
-  bot.on("kicked", (r) => console.log(new pc(simplify(r)).toAnsi()));
-  bot.on("error", console.log);
+  bot.on("kicked", (r) =>
+    console.log(`[${bot.username}] ${new pc(simplify(r)).toAnsi()}`),
+  );
+  bot.on("error", (r) => console.log(`[${bot.username}] ${r}`));
   bot.on("end", () => {
     usedProxy[v.config.proxy.host] = usedProxy[v.config.proxy.host].filter(
       (u) => u !== v.config.username,
