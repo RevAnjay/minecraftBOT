@@ -84,14 +84,14 @@ global.load = {
 async function main(v) {
   usedproxy = usedproxy || {};
   const availableProxies = config.proxy.proxies.filter(
-    (p) => (usedProxy[p]?.length || 0) < config.proxy.botperproxy,
+    (p) => (usedProxy[p.host]?.length || 0) < config.proxy.botperproxy,
   );
   const proxy =
     availableProxies[Math.floor(Math.random() * availableProxies.length)];
 
   if (proxy) {
-    usedProxy[proxy] = usedProxy[proxy] || [];
-    usedProxy[proxy].push(v.config.username);
+    usedProxy[proxy.host] = usedProxy[proxy.host] || [];
+    usedProxy[proxy.host].push(v.config.username);
     v.config.proxy = proxy;
   }
 
