@@ -82,7 +82,6 @@ global.load = {
 };
 
 async function main(v) {
-  usedproxy = usedproxy || {};
   const availableProxies = config.proxy.proxies.filter(
     (p) => (usedProxy[p.host]?.length || 0) < config.proxy.botperproxy,
   );
