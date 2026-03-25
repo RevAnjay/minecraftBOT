@@ -5,16 +5,17 @@
   "main": "YourmainbotUsername",
   "owners": ["YourUsername"],
   "proxy": {
-    botperproxy": 1,
+    "botperproxy": 1,
     "proxies": [
-    {
-      "type": 5,
-      "host": "localhost",
-      "port": 1080,
-      "username": "",
-      "password": ""
-    }
-  ]},
+      {
+        "type": 5,
+        "host": "localhost",
+        "port": 1080,
+        "username": "",
+        "password": ""
+      }
+    ]
+  },
   "bots": [
     {
       "config": {
