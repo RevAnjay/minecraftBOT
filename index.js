@@ -130,6 +130,7 @@ async function main(v) {
   });
 
   bot.once("login", () => {
+    console.log(`[+] ${bot.username} has logged in`);
     global.data[bot.username] = { inventory: [], invtitle: "" };
     if (!latestchat[bot.username]) latestchat[bot.username] = [];
     if (!latestlog[bot.username]) latestlog[bot.username] = [];
