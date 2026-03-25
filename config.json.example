@@ -4,6 +4,17 @@
   "port": 25565,
   "main": "YourmainbotUsername",
   "owners": ["YourUsername"],
+  "proxy": {
+    botperproxy": 1,
+    "proxies": [
+    {
+      "type": 5,
+      "host": "localhost",
+      "port": 1080,
+      "username": "",
+      "password": ""
+    }
+  ]},
   "bots": [
     {
       "config": {

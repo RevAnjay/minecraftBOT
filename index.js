@@ -20,6 +20,7 @@ import {
 import chokidar from "chokidar";
 import config from "./config.json" with { type: "json" };
 import cors from "cors";
+import { SocksClient } from "socks";
 
 const pc = prc(config.version);
 const app = express();
@@ -38,6 +39,7 @@ app.get(/.*/, (req, res) => {
 });
 const server = http.createServer(app);
 const wss = new WebSocketServer({ server });
+let usedProxy = {};
 global.data = {};
 /*
 let latestchat = [];
@@ -80,8 +82,34 @@ global.load = {
 };
 
 async function main(v) {
+  usedproxy = usedproxy || {};
+  const availableProxies = config.proxy.proxies.filter(
+    (p) => (usedProxy[p]?.length || 0) < config.proxy.botperproxy,
+  );
+  const proxy =
+    availableProxies[Math.floor(Math.random() * availableProxies.length)];
+
+  if (proxy) {
+    usedProxy[proxy] = usedProxy[proxy] || [];
+    usedProxy[proxy].push(v.config.username);
+    v.config.proxy = proxy;
+  }
+
   const bot = mc.createBot({
     ...v.config,
+    connect: (client) =>
+      SocksClient.createConnection(
+        {
+          proxy: { host: proxy.host, port: proxy.port, type: proxy.type },
+          command: "connect",
+          destination: { host: config.host, port: config.port },
+        },
+        (er, info) => {
+          if (er) throw er;
+          client.setSocket(info.socket);
+          client.emit("connect");
+        },
+      ),
     host: config.host,
     port: config.port,
     version: config.version,
@@ -205,10 +233,11 @@ async function main(v) {
         if (latestlog.length > 50) latestlog.shift();
         latestlog.push(m.toHTML());
       }
-      if (m.toString().includes("Shards » ★10 has been added to your account!") && bot.username !== config.main)
-        bot.chat(
-          `/shard pay ${config.main} 10`,
-        );
+      if (
+        m.toString().includes("Shards » ★10 has been added to your account!") &&
+        bot.username !== config.main
+      )
+        bot.chat(`/shard pay ${config.main} 10`);
       if (!m.toString().includes("Mana")) {
         if (latestchat[bot.username].length > 50)
           latestchat[bot.username].shift();
@@ -225,13 +254,13 @@ async function main(v) {
         await bot.waitForTicks(10);
         await bot.clickWindow(3, 0, 0);
       }
-      const match = m.toString().match(/✉⬇ ᴍᴇꜱꜱᴀɢᴇ \((.*?) → (.*?)\) /)
+      const match = m.toString().match(/✉⬇ ᴍᴇꜱꜱᴀɢᴇ \((.*?) → (.*?)\) /);
       if (
-        match && config.owners.includes(match[1]) && match[2] === bot.username
+        match &&
+        config.owners.includes(match[1]) &&
+        match[2] === bot.username
       ) {
-        const msg = m
-          .toString()
-          .replace(/✉⬇ ᴍᴇꜱꜱᴀɢᴇ \((.*?) → (.*?)\) /, "");
+        const msg = m.toString().replace(/✉⬇ ᴍᴇꜱꜱᴀɢᴇ \((.*?) → (.*?)\) /, "");
         const args = msg.split(" ");
         const command = args.shift();
         let d = { m, bot, args, command, pos, defaultMove, config: v };
