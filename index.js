@@ -97,21 +97,23 @@ async function main(v) {
 
   const bot = mc.createBot({
     ...v.config,
-    connect: (client) =>
-      SocksClient.createConnection(
-        {
-          proxy: { host: proxy.host, port: proxy.port, type: proxy.type },
-          command: "connect",
-          destination: { host: config.host, port: config.port },
-        },
-        (er, info) => {
-          if (er) throw er;
-          client.setSocket(info.socket);
-          client.emit("connect");
-        },
-      ),
-    host: config.host,
-    port: config.port,
+    connect: proxy
+      ? (client) =>
+          SocksClient.createConnection(
+            {
+              proxy: { host: proxy.host, port: proxy.port, type: proxy.type },
+              command: "connect",
+              destination: { host: config.host, port: config.port },
+            },
+            (er, info) => {
+              if (er) throw er;
+              client.setSocket(info.socket);
+              client.emit("connect");
+            },
+          )
+      : undefined,
+    host: proxy ? undefined : config.host,
+    port: proxy ? undefined : config.port,
     version: config.version,
     plugins: [pathfinder, loader, Armor, baritone],
   });
