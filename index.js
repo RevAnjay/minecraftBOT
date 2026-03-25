@@ -90,6 +90,7 @@ async function main(v) {
 
   if (proxy) {
     usedProxy[proxy.host] = usedProxy[proxy.host] || [];
+    
     usedProxy[proxy.host].push(v.config.username);
     v.config.proxy = proxy;
   }
@@ -275,10 +276,13 @@ async function main(v) {
 
   bot.on("kicked", (r) => console.log(new pc(simplify(r)).toAnsi()));
   bot.on("error", console.log);
-  bot.on("end", () =>
+  bot.on("end", () =>{
+    usedProxy[v.config.proxy.host] = usedProxy[v.config.proxy.host].filter(
+      (u) => u !== v.config.username,
+    );
     setTimeout(() => {
       main(v);
-    }, 5000),
+    }, 5000),}
   );
 }
 
