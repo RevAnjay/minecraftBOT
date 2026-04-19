@@ -248,7 +248,7 @@ async function main(v) {
       }
       if (m.toString().includes("/trade accept")) {
         if (
-          !["XDaffa_teru", "xAezteru_"].includes(
+          !config.owners.includes(
             m.toString().replace("/trade accept ", ""),
           )
         )
@@ -280,9 +280,11 @@ async function main(v) {
   );
   bot.on("error", (r) => console.log(`[${bot.username}] ${r}`));
   bot.on("end", () => {
-    usedProxy[v.config.proxy.host] = usedProxy[v.config.proxy.host].filter(
-      (u) => u !== v.config.username,
-    );
+    if (v.config.proxy) {
+      usedProxy[v.config.proxy.host] = usedProxy[v.config.proxy.host].filter(
+        (u) => u !== v.config.username,
+      );
+    }
     setTimeout(() => {
       main(v);
     }, 5000);
